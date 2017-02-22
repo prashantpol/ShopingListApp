@@ -10,6 +10,7 @@ import UIKit
 
 class CustomListViewCell: UITableViewCell {
 
+    @IBOutlet weak var lblListname: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

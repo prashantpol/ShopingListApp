@@ -6,4 +6,14 @@
 //  Copyright © 2017 Polorg. All rights reserved.
 //
 
+
+
 import Foundation
+import RealmSwift
+
+class ShoppingListModel:Object{
+    dynamic var listName: String = ""
+    
+}
+
+

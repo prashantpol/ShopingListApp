@@ -7,45 +7,62 @@
 //
 
 import UIKit
-
+import RealmSwift
 class ShoppingListTableViewController: UITableViewController {
 
+      var shoppingLists : [ShoppingListModel] = []
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        fetchData()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
-
+    func fetchData()
+    {
+        let realm = try! Realm()
+        shoppingLists =  Array(realm.objects(ShoppingListModel.self))
+        print(shoppingLists.count)
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        fetchData()
+        
+        self.tableView?.reloadData()   // ...and it is also visible here.
     }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return shoppingLists.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "shoppinglistcell", for: indexPath) as! CustomListViewCell
 
+        let shoppingList = self.shoppingLists[indexPath.row]
+        cell.lblListname.text=shoppingList.listName
+        
+        
         // Configure the cell...
 
         return cell
     }
-    */
+   
 
     /*
     // Override to support conditional editing of the table view.
