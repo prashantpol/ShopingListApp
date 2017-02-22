@@ -45,7 +45,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="lblListname" destination="Aih-a3-zwq" id="kXe-ud-lZW"/>
-                                    <segue destination="OQq-y9-sfp" kind="show" identifier="segueadditem" id="5Pk-fL-hnN"/>
+                                    <segue destination="vLu-g3-2mS" kind="show" identifier="showItemList" id="z56-uE-oji"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -67,33 +67,114 @@
             </objects>
             <point key="canvasLocation" x="989.60000000000002" y="-766.86656671664173"/>
         </scene>
-        <!--Table View Controller-->
-        <scene sceneID="IbB-hm-Ftl">
+        <!--Add Items-->
+        <scene sceneID="2KM-kT-Z81">
             <objects>
-                <tableViewController id="OQq-y9-sfp" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Fhu-ck-Nl1">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6J7-rV-BzY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tableViewController id="vLu-g3-2mS" customClass="ItemsTableViewController" customModule="ShopingListApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="VQf-Xr-Il7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="bGc-E0-xZA">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="lYU-wn-wNN">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bGc-E0-xZA" id="Jto-3K-mzU">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lYU-wn-wNN" id="z2b-Ic-tL2">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="OQq-y9-sfp" id="qE2-aW-Xfq"/>
-                            <outlet property="delegate" destination="OQq-y9-sfp" id="Rdo-qJ-qoY"/>
+                            <outlet property="dataSource" destination="vLu-g3-2mS" id="J9u-RN-TU0"/>
+                            <outlet property="delegate" destination="vLu-g3-2mS" id="IbV-LI-cp4"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Add Items" id="M9Q-Ur-td7">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="ov8-IR-UYe">
+                            <connections>
+                                <segue destination="WTc-Jo-rEA" kind="show" identifier="segueadditemtext" id="eRN-CH-5e9"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="GN7-7g-hXr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1769" y="-1056"/>
+            <point key="canvasLocation" x="1916" y="-1076"/>
+        </scene>
+        <!--Add Items View Controller-->
+        <scene sceneID="W94-Qt-Ir1">
+            <objects>
+                <viewController id="WTc-Jo-rEA" customClass="AddItemsViewController" customModule="ShopingListApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="z4h-fE-tu5"/>
+                        <viewControllerLayoutGuide type="bottom" id="xyi-9a-lnn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RNO-hK-c1z">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add New Items to Shopping List" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vw6-DK-evb">
+                                <rect key="frame" x="16" y="85" width="245" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Shopping List Item" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ePh-N3-ilD">
+                                <rect key="frame" x="16" y="115" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Quantity" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wfe-FD-UJs">
+                                <rect key="frame" x="130" y="154" width="112" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pDM-oO-92u">
+                                <rect key="frame" x="295" y="192" width="64" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.8840395942" green="0.036287124249999997" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btn_SaveItem:" destination="WTc-Jo-rEA" eventType="touchUpInside" id="uYp-Ak-4EJ"/>
+                                    <action selector="btn_SaveList:" destination="eBe-dQ-YXT" eventType="touchUpInside" id="Y0k-Y3-3Oz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eky-ME-DqC">
+                                <rect key="frame" x="89" y="154" width="39" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.8840395942" green="0.036287124249999997" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="&lt;">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wzf-lr-exO">
+                                <rect key="frame" x="244" y="154" width="38" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.8840395942" green="0.036287124249999997" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="&gt;">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="lblItemName" destination="ePh-N3-ilD" id="04h-EX-VHH"/>
+                        <outlet property="txtItemName" destination="ePh-N3-ilD" id="Uec-6z-7IA"/>
+                        <outlet property="txtQuantity" destination="Wfe-FD-UJs" id="bwu-rg-HkS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fvk-t0-zYj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2834" y="-728"/>
         </scene>
         <!--Add List Name View Controller-->
         <scene sceneID="rHX-74-wZp">
@@ -141,7 +222,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R69-qf-VJX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1770" y="-394"/>
+            <point key="canvasLocation" x="1916" y="-313"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qpy-Xz-zch">

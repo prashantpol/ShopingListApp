@@ -20,6 +20,8 @@
 		EAEFF6351E5D108700F25EA7 /* ShoppingListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEFF6341E5D108700F25EA7 /* ShoppingListTableViewController.swift */; };
 		EAEFF6371E5D15D200F25EA7 /* AddListNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEFF6361E5D15D200F25EA7 /* AddListNameViewController.swift */; };
 		EAEFF6391E5D184100F25EA7 /* CustomListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEFF6381E5D184100F25EA7 /* CustomListViewCell.swift */; };
+		EAEFF63D1E5D200600F25EA7 /* ItemsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEFF63C1E5D200600F25EA7 /* ItemsTableViewController.swift */; };
+		EAEFF63F1E5D204B00F25EA7 /* AddItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEFF63E1E5D204B00F25EA7 /* AddItemsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -51,6 +53,8 @@
 		EAEFF6341E5D108700F25EA7 /* ShoppingListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingListTableViewController.swift; sourceTree = "<group>"; };
 		EAEFF6361E5D15D200F25EA7 /* AddListNameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddListNameViewController.swift; sourceTree = "<group>"; };
 		EAEFF6381E5D184100F25EA7 /* CustomListViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomListViewCell.swift; sourceTree = "<group>"; };
+		EAEFF63C1E5D200600F25EA7 /* ItemsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsTableViewController.swift; sourceTree = "<group>"; };
+		EAEFF63E1E5D204B00F25EA7 /* AddItemsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddItemsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,8 @@
 				EAEFF6341E5D108700F25EA7 /* ShoppingListTableViewController.swift */,
 				EAEFF6361E5D15D200F25EA7 /* AddListNameViewController.swift */,
 				EAEFF6381E5D184100F25EA7 /* CustomListViewCell.swift */,
+				EAEFF63C1E5D200600F25EA7 /* ItemsTableViewController.swift */,
+				EAEFF63E1E5D204B00F25EA7 /* AddItemsViewController.swift */,
 			);
 			path = ShopingListApp;
 			sourceTree = "<group>";
@@ -176,11 +182,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				EAEFF6331E5D101500F25EA7 /* ShoppingListModel.swift in Sources */,
+				EAEFF63F1E5D204B00F25EA7 /* AddItemsViewController.swift in Sources */,
 				EAEFF61C1E5D076B00F25EA7 /* ViewController.swift in Sources */,
 				EAEFF61A1E5D076B00F25EA7 /* AppDelegate.swift in Sources */,
 				EAEFF6371E5D15D200F25EA7 /* AddListNameViewController.swift in Sources */,
 				EAEFF6351E5D108700F25EA7 /* ShoppingListTableViewController.swift in Sources */,
 				EAEFF6391E5D184100F25EA7 /* CustomListViewCell.swift in Sources */,
+				EAEFF63D1E5D200600F25EA7 /* ItemsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

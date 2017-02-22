@@ -1,5 +1,5 @@
 //
-//  ShoppingListTableViewController.swift
+//  ItemsTableViewController.swift
 //  ShopingListApp
 //
 //  Created by Prashant Pol on 2017-02-21.
@@ -8,83 +8,47 @@
 
 import UIKit
 import RealmSwift
-class ShoppingListTableViewController: UITableViewController {
 
-      var shoppingLists : [ShoppingListModel] = []
+class ItemsTableViewController: UITableViewController {
+
     
+     var shoppingListSingle : ShoppingListModel = ShoppingListModel()
     override func viewDidLoad() {
         super.viewDidLoad()
-        fetchData()
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
-    func fetchData()
-    {
-        let realm = try! Realm()
-        shoppingLists =  Array(realm.objects(ShoppingListModel.self))
-        print(shoppingLists.count)
-    }
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        fetchData()
-        
-        self.tableView?.reloadData()   // ...and it is also visible here.
     }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        return 0
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return shoppingLists.count
+        return 0
     }
 
-    
+    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "shoppinglistcell", for: indexPath) as! CustomListViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
-        let shoppingList = self.shoppingLists[indexPath.row]
-        cell.lblListname.text=shoppingList.listName
-        
-        
         // Configure the cell...
 
         return cell
     }
-   
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        if(segue.identifier != "showItemList")
-        {
-           
-                
-        }
-        
-        else{
-            if let destinationViewController = segue.destination as? ItemsTableViewController {
-                //            let indexPath = self.tableView.indexPathForSelectedRow
-                let row = self.tableView.indexPathForSelectedRow!.row
-                //let name = shoppingLists[row].name;
-                
-                destinationViewController.shoppingListSingle = shoppingLists[row]
-                
-            }
-        }
-        
-    }
-
+    */
 
     /*
     // Override to support conditional editing of the table view.

@@ -13,7 +13,17 @@ import RealmSwift
 
 class ShoppingListModel:Object{
     dynamic var listName: String = ""
-    
+    var listItems: List<ListItemModel> = List()
+    dynamic var itemsCount: Int {
+        get {
+            return listItems.count
+        }
+    }
 }
 
-
+class ListItemModel: Object {
+    
+    dynamic var name: String = ""
+    dynamic var quantity: Int = 0
+    
+}
