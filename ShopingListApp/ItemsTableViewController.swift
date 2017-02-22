@@ -12,7 +12,7 @@ import RealmSwift
 class ItemsTableViewController: UITableViewController {
 
     
-     var shoppingListSingle : ShoppingListModel = ShoppingListModel()
+     var shoppingListSingle : ShoppingListModel!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -34,23 +34,52 @@ class ItemsTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        print("---")
+        print(shoppingListSingle.itemsCount)
+        return shoppingListSingle.itemsCount
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath) as! CustomeItemTableViewCell
+        cell.lblitem.text=shoppingListSingle.listItems[indexPath.row].name
+        print("sdfd")
+        print(shoppingListSingle.itemsCount)
         // Configure the cell...
 
         return cell
     }
-    */
+ 
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if(segue.identifier != "showItemList")
+        {
+            
+            
+        }
+            
+        else{
+            if let destinationViewController = segue.destination as? AddItemsViewController {
+                //            let indexPath = self.tableView.indexPathForSelectedRow
+                //let row = self.tableView.indexPathForSelectedRow!.row
+                //let name = shoppingLists[row].name;
+                
+                destinationViewController.shoppinListModel = shoppingListSingle
+                
+            }
+        }
+        
+    }
+    
+
+    
 
     /*
     // Override to support conditional editing of the table view.

@@ -11,8 +11,11 @@
 import Foundation
 import RealmSwift
 
+
+///declaring models
 class ShoppingListModel:Object{
     dynamic var listName: String = ""
+    //Declaring List of ListItemModels
     var listItems: List<ListItemModel> = List()
     dynamic var itemsCount: Int {
         get {
@@ -24,6 +27,6 @@ class ShoppingListModel:Object{
 class ListItemModel: Object {
     
     dynamic var name: String = ""
-    dynamic var quantity: Int = 0
+    dynamic var quantity: String = ""
     
 }

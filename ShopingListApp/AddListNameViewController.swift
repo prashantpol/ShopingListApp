@@ -16,7 +16,7 @@ protocol SaveDelegate {
 
 class AddListNameViewController: UIViewController {
 
-    
+    //initialization of ShoppingList Array
     var shopingListModels : [ShoppingListModel] = []
       var delegate: SaveDelegate?
     
@@ -34,6 +34,8 @@ class AddListNameViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
+    //Saving List Name in Datatabse
     @IBAction func btn_SaveList(_ sender: UIButton) {
          let realm = try! Realm()
         
@@ -41,13 +43,13 @@ class AddListNameViewController: UIViewController {
         let newList=ShoppingListModel()
         newList.listName=lblListName.text!
      
-        // Persist your data easily
+       
         try! realm.write {
             //Adding Object Realm DB
             realm.add(newList)
             //Calling delgate function in Tableview for updating List.
             delegate?.saveTask(data: newList)
-            //Pop up last activity
+            //Pop up last activity where you come from
             self.navigationController?.popViewController(animated: true)
            // action = ""
         }

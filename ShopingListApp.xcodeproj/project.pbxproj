@@ -22,6 +22,7 @@
 		EAEFF6391E5D184100F25EA7 /* CustomListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEFF6381E5D184100F25EA7 /* CustomListViewCell.swift */; };
 		EAEFF63D1E5D200600F25EA7 /* ItemsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEFF63C1E5D200600F25EA7 /* ItemsTableViewController.swift */; };
 		EAEFF63F1E5D204B00F25EA7 /* AddItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEFF63E1E5D204B00F25EA7 /* AddItemsViewController.swift */; };
+		EAEFF6411E5D323600F25EA7 /* CustomeItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEFF6401E5D323600F25EA7 /* CustomeItemTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -55,6 +56,7 @@
 		EAEFF6381E5D184100F25EA7 /* CustomListViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomListViewCell.swift; sourceTree = "<group>"; };
 		EAEFF63C1E5D200600F25EA7 /* ItemsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsTableViewController.swift; sourceTree = "<group>"; };
 		EAEFF63E1E5D204B00F25EA7 /* AddItemsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddItemsViewController.swift; sourceTree = "<group>"; };
+		EAEFF6401E5D323600F25EA7 /* CustomeItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomeItemTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				EAEFF6381E5D184100F25EA7 /* CustomListViewCell.swift */,
 				EAEFF63C1E5D200600F25EA7 /* ItemsTableViewController.swift */,
 				EAEFF63E1E5D204B00F25EA7 /* AddItemsViewController.swift */,
+				EAEFF6401E5D323600F25EA7 /* CustomeItemTableViewCell.swift */,
 			);
 			path = ShopingListApp;
 			sourceTree = "<group>";
@@ -185,6 +188,7 @@
 				EAEFF63F1E5D204B00F25EA7 /* AddItemsViewController.swift in Sources */,
 				EAEFF61C1E5D076B00F25EA7 /* ViewController.swift in Sources */,
 				EAEFF61A1E5D076B00F25EA7 /* AppDelegate.swift in Sources */,
+				EAEFF6411E5D323600F25EA7 /* CustomeItemTableViewCell.swift in Sources */,
 				EAEFF6371E5D15D200F25EA7 /* AddListNameViewController.swift in Sources */,
 				EAEFF6351E5D108700F25EA7 /* ShoppingListTableViewController.swift in Sources */,
 				EAEFF6391E5D184100F25EA7 /* CustomListViewCell.swift in Sources */,

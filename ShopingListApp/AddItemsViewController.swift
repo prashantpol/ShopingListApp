@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 protocol SaveItemsDelegate {
     func saveTask(data: ShoppingListModel)
@@ -20,13 +21,35 @@ class AddItemsViewController: UIViewController {
     
     var delegate: SaveDelegate?
     
+    
+    //Button to save List Items of particular LIST
     @IBAction func btn_SaveItem(_ sender: UIButton) {
-        
-        
+        let realm = try! Realm()
+
+        try! realm.write {
+            let item = ListItemModel()
+            
+            item.name=txtItemName.text!
+            var qnt = txtQuantity.text!
+            item.quantity=txtQuantity.text!
+            
+             shoppinListModel.listItems.append(item)
+            
+            //Updating Object Realm DB
+            
+            //Calling delgate function in Tableview for updating List.
+            delegate?.saveTask(data: shoppinListModel)
+            //Pop up last activity
+            self.navigationController?.popViewController(animated: true)
+            
+            print(shoppinListModel)
+        }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+       print( shoppinListModel.listName)
         
         
         // Do any additional setup after loading the view.
